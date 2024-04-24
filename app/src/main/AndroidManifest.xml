@@ -13,7 +13,7 @@
     android:theme="@style/Theme.Codelabs"
     tools:targetApi="31">
 
-    <activity android:name=".nope.Noice"
+    <activity android:name="DataBindingMainActivity"
       android:exported="true">
 
       <intent-filter>
