@@ -2,10 +2,12 @@
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.apphatchery.codelabs.databinding.ActivityMainBinding
 import org.apphatchery.codelabs.databinding.models.Person
 import org.apphatchery.codelabs.databinding.adapter.PersonAdapter
+import org.apphatchery.codelabs.recyclerview.RecyclerViewAdapter
 
 class DataBindingMainActivity : AppCompatActivity(){
 
@@ -30,11 +32,10 @@ class DataBindingMainActivity : AppCompatActivity(){
                 "Strider"
             ),
         )
-        adapter = PersonAdapter(people)
-        binding.recyclerView.layoutManager= LinearLayoutManager(this)
-        with(binding){
+        val adapter = PersonAdapter()
+        adapter.submitList(people)
+        binding.recyclerView.adapter = adapter
 
-            recyclerView.adapter = adapter
-        }
+        binding.recyclerView.layoutManager = GridLayoutManager(this, 1)
     }
 }
