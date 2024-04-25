@@ -13,7 +13,7 @@
     android:theme="@style/Theme.Codelabs"
     tools:targetApi="31">
 
-    <activity android:name=".lifecycle.LifecycleActivity"
+    <activity android:name=".databinding.DataBindingMainActivity"
       android:exported="true">
 
       <intent-filter>
